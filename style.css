@@ -1,0 +1,74 @@
+body, h1, h2, p, div {
+	margin: 0;
+	padding: 0;
+}
+
+.content-wrapper {
+	margin: auto;
+	width: 80%;
+}
+
+.text-section > div {
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+	display: flex;
+}
+
+.text-section > div > * {
+	width: 50%;
+}
+
+.image-section > div {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-rows: repeat(3, auto);
+	column-gap: 10%;
+}
+
+.profile:nth-child(3n + 2) {
+	margin-top: 10rem;
+}
+
+.profile {
+	display: flex;
+}
+
+.profile-image-name > img {
+	max-width: 100%;
+}
+
+.profile-title {
+	writing-mode: vertical-lr;
+}
+
+footer {
+	margin-top: 5rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+@media (max-width: 800px) {
+	.content-wrapper {
+		width: 90%;
+	}
+	.text-section > div {
+		display: block;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+	.text-section > div > * {
+		width: 100%;
+	}
+	.page-title {
+		margin-bottom: 1rem;
+	}
+	.image-section > div {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+	.profile:nth-child(3n+2) {
+		margin-top: 0;
+	}
+	.profile:nth-child(2n) {
+		margin-top: 10rem;
+	}
+}
